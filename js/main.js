@@ -19,3 +19,12 @@ function convert(){
         document.getElementById("output").innerHTML = content;
     });;
 }
+
+function saveAsPDF(){
+    var textToBeConverted = document.getElementById("output").innerHTML;
+    var docDefinition = {
+        content: {text: textToBeConverted, fontSize: 12}
+    };
+
+    pdfMake.createPdf(docDefinition).download('Belge.pdf');
+}

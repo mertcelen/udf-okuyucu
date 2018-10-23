@@ -7,6 +7,8 @@
     <title>UDF Okuyucu</title>
     <script src="js/jszip.min.js"></script>
     <script src="js/jspdf.min.js"></script>
+    <script src='js/pdfmake.min.js'></script>
+    <script src='js/vfs_fonts.js'></script>
     <script src="js/main.js"></script>
     <style>
         pre {
@@ -30,8 +32,9 @@
 </head>
 <body>
     <div class="udfSource">
-        <input id="file" type="file" id="file" name="file" onchange="convert()"/>
+        <input id="file" type="file" accept=".udf" id="file" name="file" onchange="convert()"/>
     </div><br />
+    <button onclick="saveAsPDF()">Save as PDF</button>
     <pre id="output"></pre>
 </body>
 </html>
